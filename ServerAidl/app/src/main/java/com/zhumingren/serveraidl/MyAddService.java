@@ -40,7 +40,7 @@ public class MyAddService extends Service {
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
             byte[] bytes = outputStream.toByteArray();
-            Log.e("zyl", "getOriginBitmapBytes bytes length: " + bytes.length);
+            Log.e("zyl", "getOriginBitmapBytes bytes length: " + bytes.length); // 本进程, 子线程
             return bytes;
         }
     }

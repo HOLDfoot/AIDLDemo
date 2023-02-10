@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         imageView = findViewById(R.id.image_view);
+        Log.e("zyl", "MainActivity");
     }
 
     private void callAddAidlService() {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             byte[] bytes = myAidlInterface.getOriginBitmapBytes();
             Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
             imageView.setImageBitmap(bitmap);
-            Log.d("zyl", "add: " + add);
+            Log.e("zyl", "add: " + add);// 本进程, 主线程
         } catch (RemoteException e) {
             e.printStackTrace();
         }
