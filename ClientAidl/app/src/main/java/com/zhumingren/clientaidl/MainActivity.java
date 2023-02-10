@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent("myaddservice");
         intent.setPackage("com.zhumingren.serveraidl");
         ComponentName componentName = new ComponentName("com.zhumingren.serveraidl", "com.zhumingren.serveraidl.MyAddService");
+        intent.setComponent(componentName);
         ServiceConnection conn = new ServiceConnection() {
 
             @Override
@@ -65,6 +66,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         boolean b = bindService(intent, conn, Service.BIND_AUTO_CREATE);
-        Log.i("zyl", "bind b= " + b);
+        Log.e("zyl", "bind b= " + b);
     }
 }

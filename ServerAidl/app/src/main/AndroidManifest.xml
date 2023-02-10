@@ -23,6 +23,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="myaddservice" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
     </application>
