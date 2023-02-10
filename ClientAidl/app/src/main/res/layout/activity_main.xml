@@ -12,5 +12,10 @@
         android:text="Hello World!"
         />
 
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="400px"
+        android:layout_height="400px"/>
+
 
 </LinearLayout>
